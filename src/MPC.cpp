@@ -8,7 +8,7 @@ using CppAD::AD;
 // Here we had to assign values to N and dt. This defines the horizon T (just a few seconds for this application).
 // A large N yields to a large number of optimized variables (computationally intensive).
 // A small dt is also computationally intensive but a large one results in discretization error. A good compromise is:
-size_t N = 12;
+size_t N = 10;
 double dt = 0.1;
 
 // This value assumes the model presented in the classroom is used.
