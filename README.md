@@ -27,6 +27,21 @@ where
 
 Using the above set of model equations we can provide the system with actuator values to control and change the state of the vehicle.
 
+### the selection of N and dt 
+After trying different values, as shown in the below table,
+
+|   N     |   dt     |
+| ------- | -------- |
+|    25   |   0.01   |
+|    10   |   0.03   |
+|    10   |   0.1    |
+
+The number of points `N` and the time interval `dt` determine the prediction horizon.
+The number of points impacts the controller performance as well.
+I tried to keep the horizon around the same time the waypoints were on the simulator. 
+With too many points the controller starts to run slower, 
+and some times it went wild very easily. After these trials, 
+I finally picked the last combination which contributes a smoother drive.
 
 
 ### Polynomial Fitting and MPC Preprocessing
